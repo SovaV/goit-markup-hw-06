@@ -77,15 +77,14 @@ ol {
 /* ======== КНОПКА ======== */
 
 .button {
-  display: block;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   padding: 6px 22px;
   border-radius: 4px;
   border: 0px;
+  align-items: center;
 
-  background-color: var(--background-color);
-  color: var(--primary-text-color);
   font-family: inherit;
   font-family: Roboto;
   font-weight: 500;
@@ -94,6 +93,8 @@ ol {
   letter-spacing: 0.03em;
   text-align: center;
   cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -108,15 +109,16 @@ ol {
 }
 
 .button.primary {
-  padding: 10px 32px;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  justify-content: center;
 
   background-color: var(--accent-text-color);
   color: var(--white-color);
   font-family: inherit;
   font-weight: bold;
-  font-size: 16px;
   line-height: 1.9;
-  align-items: center;
   letter-spacing: 0.06em;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -298,7 +300,7 @@ ol {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-
+/* модалка  */
 .backdrop {
   position: fixed;
   top: 0;
@@ -321,6 +323,7 @@ ol {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 40px;
 
   height: 581px;
   width: 528px;
@@ -346,7 +349,21 @@ ol {
   height: 30px;
   background-color: var(--white-color);
 }
+.btn-close:hover,
+.btn-close:focus {
+  fill: var(--accent-text-color);
+}
+.form-filed {
+  position: relative;
+}
 
+.form-label {
+  position: absolute;
+}
+
+textarea {
+  resize: none;
+}
 /* ======== ФИЛЬТР ======== */
 .filters-flex {
   padding-top: 94px;
@@ -689,6 +706,7 @@ ol {
 
 .bot-icons {
   min-width: 206px;
+  margin-right: 93px;
 }
 .bot-icons .list {
   display: flex;
@@ -717,4 +735,23 @@ ol {
 
 .footer {
   margin-right: 70px;
+}
+
+.icon-send {
+  margin-left: 10px;
+}
+.subscribe-email {
+  display: flex;
+}
+.input-footer {
+  margin-right: 12px;
+  padding: 15px 189px 15px 16px;
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+input {
+  width: 100%;
 }
