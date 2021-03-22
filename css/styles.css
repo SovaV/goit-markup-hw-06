@@ -323,7 +323,6 @@ ol {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 40px;
 
   height: 581px;
   width: 528px;
@@ -353,12 +352,44 @@ ol {
 .btn-close:focus {
   fill: var(--accent-text-color);
 }
+
+.modal-menu {
+  display: block;
+  padding: 40px;
+}
 .form-filed {
   position: relative;
+  margin-bottom: 10px;
 }
-
 .form-label {
   position: absolute;
+  /* top: 50%; */
+  left: 10px;
+
+  transform: translateY(-100%);
+}
+/* .input-model:hover + .icon-label,
+.input-model:hover,
+.input-model:focus + .icon-label,
+.input-model:focus {
+  fill: var(--accent-text-color);
+  border-color: var(--accent-text-color);
+} */
+.form-input {
+  margin: 0px;
+  padding: 11px 12px;
+  font: inherit;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.icon-label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
 }
 
 textarea {
@@ -736,21 +767,40 @@ textarea {
 .footer {
   margin-right: 70px;
 }
-
 .icon-send {
   margin-left: 10px;
+}
+.subscribe {
+  display: inline-block;
+  width: 100%;
 }
 .subscribe-email {
   display: flex;
 }
+.subscribe-email .button.primary {
+  padding-left: 29px;
+  padding-right: 28px;
+}
 .input-footer {
+  position: relative;
   margin-right: 12px;
-  padding: 15px 189px 15px 16px;
   background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+.sub-label {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 16px;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
 }
 input {
   width: 100%;
