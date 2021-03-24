@@ -467,13 +467,7 @@ textarea {
   border: 2px solid black;
   border-radius: 3px;
 }
-.checkbox:focus + .check-icon {
-  background-color: var(--accent-text-color);
-  background-image: url(../images/icon\ check.svg);
-  background-size: contain;
-  background-origin: border-box;
-  border-color: var(--accent-text-color);
-}
+
 .checkbox:checked + .check-icon {
   background-color: var(--accent-text-color);
   background-image: url(../images/icon\ check.svg);
